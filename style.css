@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: #333;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.highlighted {
+    color: #57b846;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    color: #fff;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:hover{
+    color: black;
+}
+
+.nav-item-active {
+    border-bottom: 2px solid #57b846;
+}
+
+.home {
+    background-image: url("https://source.unsplash.com/random/1920x1080/?code,laptop");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.home-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.home-subtitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #57b846;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #44a03d;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.services-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.services-item:hover {
+    transform: translateY(-10px);
+}
+
+.services-item-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services-item-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.contact {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 40px;
+}
+
+.contact-input {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 1px #57b846;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item {
+        padding: 20px;
+    }
+
+    .nav-item-active {
+        border: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-toggle.active ~ .navbar-menu {
+        display: flex;
+    }
+}
